@@ -1,25 +1,28 @@
-import Header from "./components/header/header.jsx"
-import "./app.css"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./app.css";
+import AdminPage from "./pages/admin page/admin";
+import Homepage from "./pages/client page/Homepage";
 
 function App() {
-
   return (
     <>
-      <Header/>
-      <div className="w-full h-screen bg-blue-900 flex">
-        <div className="border border-white bg-white h-[100px] w-[700px] rounded-lg flex items-center justify-center">
-          <input type="date"/>
-          <input type="date"/>
-          <select>
-            <option>Luxury</option>
-            <option>Normal</option>
-          </select>
-          <button>Book Now</button>
-        </div>
+      <BrowserRouter>
+        <Routes path= "/">
 
-      </div>
+          <Route path="/" element={<Homepage/>}/>
+
+          <Route path="/admin/*" element={<AdminPage/>}/>
+
+          <Route path="/*" element={
+            <div className="min-w-full h-[100vh] bg-green-400 flex items-center justify-center">
+              <h1 className="text-[50px]">404 Not Found</h1>
+            </div>
+          } />
+
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
