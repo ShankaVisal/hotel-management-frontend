@@ -9,15 +9,9 @@ function App() {
       <BrowserRouter>
         <Routes path= "/">
 
-          <Route path="/" element={<Homepage/>}/>
-
           <Route path="/admin/*" element={<AdminPage/>}/>
 
-          <Route path="/*" element={
-            <div className="min-w-full h-[100vh] bg-green-400 flex items-center justify-center">
-              <h1 className="text-[50px]">404 Not Found</h1>
-            </div>
-          } />
+          <Route path="/*" element={<Homepage/>}/>
 
         </Routes>
       </BrowserRouter>
