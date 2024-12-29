@@ -1,8 +1,8 @@
-export default function AdminBooking(){
+export default function Users(){
     return(
         <>
             <div className="w-full">
-                Admin Booking
+                Admin Users
             </div>
         </>
     )

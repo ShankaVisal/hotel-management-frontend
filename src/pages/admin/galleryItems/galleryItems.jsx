@@ -1,8 +1,8 @@
-export default function AdminBooking(){
+export default function GalleryItems(){
     return(
         <>
             <div className="w-full">
-                Admin Booking
+                Gallery Items
             </div>
         </>
     )

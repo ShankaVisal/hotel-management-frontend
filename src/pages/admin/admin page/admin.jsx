@@ -1,5 +1,11 @@
 import { Link, Route, Routes } from "react-router-dom";
 import { FaCalendarCheck, FaListAlt, FaBed, FaUsers, FaComments, FaImages } from "react-icons/fa";
+import AdminBooking from "../bookings/adminBooking.jsx";
+import AdminCategories from "../categories/adminCategories.jsx";
+import Rooms from "../rooms/rooms.jsx";
+import Users from "../users/users.jsx";
+import AdminFeedback from "../feedback/adminFeedbacks.jsx";
+import GalleryItems from "../galleryItems/galleryItems.jsx";
 
 export default function AdminPage() {
   return (
@@ -43,12 +49,12 @@ export default function AdminPage() {
 
             <Routes path="/">
 
-                <Route path="/bookings" element={<h1>Booking</h1>}></Route>
-                <Route path="/categories" element={<h1>categories</h1>}></Route>
-                <Route path="/rooms" element={<h1>rooms</h1>}></Route>
-                <Route path="/users" element={<h1>users</h1>}></Route>
-                <Route path="/feedbacks" element={<h1>feedbacks</h1>}></Route>
-                <Route path="/gallery-items" element={<h1>Gallery Items</h1>}></Route>
+                <Route path="/bookings" element={<AdminBooking/>}></Route>
+                <Route path="/categories" element={<AdminCategories/>}></Route>
+                <Route path="/rooms" element={<Rooms/>}></Route>
+                <Route path="/users" element={<Users/>}></Route>
+                <Route path="/feedbacks" element={<AdminFeedback/>}></Route>
+                <Route path="/gallery-items" element={<GalleryItems/>}></Route>
 
             </Routes>
 
